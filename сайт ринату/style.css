@@ -1,0 +1,726 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 25px 0;
+    font-family: 'ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 10px 0;
+    background:rgb(255, 0, 0);
+}
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a {
+    color:#fff;
+    font-size: 35px;
+    font-weight:600;
+}
+.navbar.sticky .logo a span {
+    color:rgb(255, 255, 255);
+
+}
+.navbar .logo a span {
+    color:rgb(255, 0, 0);
+}
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a {
+    color:#fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color:rgb(255, 0, 0);
+
+}
+.navbar.sticky li a:hover {
+    color:rgb(0, 0, 0);
+}
+.menu-btn {
+    color:#fff;
+    font-size: 23px;
+    cursor: pointer;
+}
+.home {
+    display: flex;
+    background: url("jordans.jpg") no-repeat center;
+    background-size:cover;
+    height: 100vh;
+    color:#fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1 {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #121dbc 20%, #610efa 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    border-image: linear-gradient(135deg, #12BCB0 20%, #a30efa 70%);  
+}
+.home .home-content .text-2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #12bc3d 20%, #0edefa 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    border-image: linear-gradient(135deg, #12BCB0 20%, #a30efa 70%);  
+}
+.home .home-content .text-3 span {
+    color:rgb(255, 255, 255);
+    font-weight: 500;
+}
+.home-content{
+    letter-spacing: 1.5px;
+}
+@media(max-width:1104px){
+    .home .max-width {
+        margin-left: 0px;
+    }
+}
+@media(max-width:991px){
+    .max-width {
+        padding: 0 50px;
+    }
+}
+@media (max-width:947px){
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left:-100%;
+        top:0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left:0;
+    }
+    .navbar .menu li {
+        display:block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-1 {
+        font-size: 55px;
+    }
+    .home .home-content .text-2 {
+        font-size: 25px;
+    }
+    .home .home-content .text-3 {
+        font-size: 35px;
+    }
+    .about .about-content .column {
+        width: 100%;
+    }
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right {
+        flex: 100px;
+    }
+    .max-width {
+        max-width: 800px;
+    }
+}
+@media(max-width:500px){
+    .max-width {
+        padding: 0 23px;
+    }
+    .home .home-content .text-2 {
+        font-size: 28px;
+    }
+    .home .home-content .text-3 {
+        font-size: 28px;
+    }
+}
+
+section {
+    padding: 100px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.teams , .teams1 ,.teams2 ,.teams3 ,.teams4 ,.teams5 , .teams6   {
+    font-family: 'Poppins'sans-serif;
+}
+
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 45px;
+    padding-bottom: 45px;
+    font-family: 'ubuntu'sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 200px;
+    height: 1px;
+    background: rgb(0, 0, 0);
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 25px;
+    color:#3179b3;
+    padding: 7px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+
+/* Товар */
+
+
+.teams {
+    color:#fff;
+    background: #111;
+}
+.teams .title::before{
+    background: #fff;
+}
+.teams .title::after {
+    background: #111;
+    content: "";
+}
+.teams .title::after {
+    content: "Air Jordan";
+}
+.teams .carousel .card {
+    background: rgb(32,44,91);
+    background: radial-gradient(circle, rgba(32,44,91,1) 0%, rgba(0,0,0,1) 100%);
+    border-radius: 6px;
+    padding: 15px 25px;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover{
+    background: rgb(32,44,91);
+    background: radial-gradient(circle, rgb(28, 68, 114) 0%, rgba(0,0,0,1) 100%);;
+}
+.teams .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover .box {
+    transform: scale(1.05);
+}
+.teams .carousel .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.teams .carousel .card img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover img {
+    border-color: rgb(38, 53, 138);
+}
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dots{
+    height: 13px;
+    width: 13px;
+    outline: none!important;
+    border-radius: 50%;
+    border:2px solic #b3313c!important;
+}
+.card a {
+    color:aqua;
+}
+
+.teams1 {
+    color:#fff;
+    background: #111;
+}
+.teams1 .title::before{
+    background: #fff;
+}
+.teams1 .title::after {
+    background: #111;
+    content: "";
+}
+.teams1 .title::after {
+    content: "Air Jordan";
+}
+.teams1 .carousel .card1 {
+    background: rgb(32,44,91);
+    background: radial-gradient(circle, rgb(59, 59, 102) 0%, rgba(0,0,0,1) 100%);
+    border-radius: 6px;
+    padding: 15px 25px;
+    transition: all 0.3s ease;
+}
+.teams1 .carousel .card1:hover{
+    background: rgb(32,44,91);
+    background: radial-gradient(circle, rgb(4, 75, 97) 0%, rgba(0,0,0,1) 100%);;
+}
+.teams1 .carousel .card1 .box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.teams1 .carousel .card1:hover .box1 {
+    transform: scale(1.05);
+}
+.teams1 .carousel .card1 .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.teams1 .carousel .card1 img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    transition: all 0.3s ease;
+}
+.teams1 .carousel .card1:hover img {
+    border-color: rgb(38, 53, 138);
+}
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dots{
+    height: 13px;
+    width: 13px;
+    outline: none!important;
+    border-radius: 50%;
+    border:2px solic #b3313c!important;
+}
+.card1 a {
+    color:rgb(0, 140, 255);
+}
+
+.teams2 {
+    color:#fff;
+    background: #111;
+}
+.teams2 .title::before{
+    background: #fff;
+}
+.teams2 .title::after {
+    background: #111;
+    content: "";
+}
+.teams2 .title::after {
+    content: "Air Jordan";
+}
+.teams2 .carousel .card2 {
+    background: rgb(32,44,91);
+    background: radial-gradient(circle, rgb(17, 79, 82) 0%, rgba(0,0,0,1) 100%);
+    border-radius: 6px;
+    padding: 15px 25px;
+    transition: all 0.3s ease;
+}
+.teams2 .carousel .card2:hover{
+    background: rgb(32,44,91);
+    background: radial-gradient(circle, rgb(94, 94, 94) 0%, rgba(0,0,0,1) 100%);;
+}
+.teams2 .carousel .card2 .box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.teams2 .carousel .card2:hover .box2 {
+    transform: scale(1.05);
+}
+.teams2 .carousel .card2 .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.teams2 .carousel .card2 img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    transition: all 0.3s ease;
+}
+.teams2 .carousel .card2:hover img {
+    border-color: rgb(255, 255, 255);
+}
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dots{
+    height: 13px;
+    width: 13px;
+    outline: none!important;
+    border-radius: 50%;
+    border:2px solic #b3313c!important;
+}
+.card2 a {
+    color:rgb(0, 140, 255);
+}
+.teams3 {
+    color:#fff;
+    background: #111;
+}
+.teams3 .title::before{
+    background: #fff;
+}
+.teams3 .title::after {
+    background: #111;
+    content: "";
+}
+.teams3 .title::after {
+    content: "Air Jordan";
+}
+.teams3 .carousel .card3 {
+    background: rgb(32,44,91);
+    background: radial-gradient(circle, rgb(46, 12, 63) 0%, rgba(0,0,0,1) 100%);
+    border-radius: 6px;
+    padding: 15px 25px;
+    transition: all 0.3s ease;
+}
+.teams3 .carousel .card3:hover{
+    background: rgb(32,44,91);
+    background: radial-gradient(circle, rgb(61, 61, 61) 0%, rgba(0,0,0,1) 100%);;
+}
+.teams3 .carousel .card3 .box3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.teams3 .carousel .card3:hover .box3 {
+    transform: scale(1.05);
+}
+.teams3 .carousel .card3 .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.teams3 .carousel .card3 img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    transition: all 0.3s ease;
+}
+.teams3 .carousel .card3:hover img {
+    border-color: rgb(255, 255, 255);
+}
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dots{
+    height: 13px;
+    width: 13px;
+    outline: none!important;
+    border-radius: 50%;
+    border:2px solic #b3313c!important;
+}
+.card3 a {
+    color:rgb(0, 140, 255);
+}
+.teams4 {
+    color:#fff;
+    background: #111;
+}
+.teams4 .title::before{
+    background: #fff;
+}
+.teams4 .title::after {
+    background: #111;
+    content: "";
+}
+.teams4 .title::after {
+    content: "Air Jordan";
+}
+.teams4 .carousel .card4 {
+    background: rgb(32,44,91);
+    background: radial-gradient(circle, rgb(75, 57, 57) 0%, rgba(0,0,0,1) 100%);
+    border-radius: 6px;
+    padding: 15px 25px;
+    transition: all 0.3s ease;
+}
+.teams4 .carousel .card4:hover{
+    background: rgb(32,44,91);
+    background: radial-gradient(circle, rgb(80, 27, 27) 0%, rgba(0,0,0,1) 100%);
+}
+.teams4 .carousel .card4 .box4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.teams4 .carousel .card4:hover .box4 {
+    transform: scale(1.05);
+}
+.teams4 .carousel .card4 .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.teams4 .carousel .card4 img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    transition: all 0.3s ease;
+}
+.teams4 .carousel .card4:hover img {
+    border-color: rgb(197, 145, 145);
+}
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dots{
+    height: 13px;
+    width: 13px;
+    outline: none!important;
+    border-radius: 50%;
+    border:2px solic #b3313c!important;
+}
+.card4 a {
+    color:rgb(255, 0, 0);
+}
+.teams5 {
+    color:#fff;
+    background: #111;
+}
+.teams5 .title::before{
+    background: #fff;
+}
+.teams5 .title::after {
+    background: #111;
+    content: "";
+}
+.teams5 .title::after {
+    content: "Air Jordan";
+}
+.teams5 .carousel .card5 {
+    background: rgb(32,44,91);
+    background: radial-gradient(circle, rgb(57, 75, 57) 0%, rgba(0,0,0,1) 100%);
+    border-radius: 6px;
+    padding: 15px 25px;
+    transition: all 0.3s ease;
+}
+.teams5 .carousel .card5:hover{
+    background: rgb(32,44,91);
+    background: radial-gradient(circle, rgb(27, 80, 36) 0%, rgba(0,0,0,1) 100%);
+}
+.teams5 .carousel .card5 .box5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.teams5 .carousel .card5:hover .box5 {
+    transform: scale(1.05);
+}
+.teams5 .carousel .card5 .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.teams5 .carousel .card5 img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    transition: all 0.3s ease;
+}
+.teams5 .carousel .card5:hover img {
+    border-color: rgb(145, 197, 154);
+}
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dots{
+    height: 13px;
+    width: 13px;
+    outline: none!important;
+    border-radius: 50%;
+    border:2px solic #b3313c!important;
+}
+.card5 a {
+    color:rgb(92, 196, 109);
+}
+.teams6 {
+    color:#fff;
+    background: #111;
+}
+.teams6 .title::before{
+    background: #fff;
+}
+.teams6 .title::after {
+    background: #111;
+    content: "";
+}
+.teams6 .title::after {
+    content: "Air Jordan";
+}
+.teams6 .card6 {
+    background: rgb(32,44,91);
+    background: radial-gradient(circle, rgb(57, 75, 57) 0%, rgba(0,0,0,1) 100%);
+    border-radius: 6px;
+    padding: 15px 25px;
+    transition: all 0.3s ease;
+}
+.teams6 .card6:hover{
+    background: rgb(32,44,91);
+    background: radial-gradient(circle, rgb(27, 80, 36) 0%, rgba(0,0,0,1) 100%);
+}
+.teams6 .card6 .box6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.teams6 .card6:hover .box6 {
+    transform: scale(1.05);
+}
+.teams6 .card6 .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.teams6 .card6 img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    transition: all 0.3s ease;
+}
+.teams6 .card6:hover img {
+    border-color: rgb(145, 197, 154);
+}
+.card6 a {
+    color:rgb(92, 196, 109);
+}
+/* Галерея */
+
+section {
+    padding: 50px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section .title2 {
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-family: 'ubuntu'sans-serif;
+}
+.title2  {
+    font-family: 'Poppins'sans-serif;
+}
+.cvyaz {
+    color:rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+}
+.cvyaz .title2::before{
+    background: #fff;
+}
+.cvyaz .title2::after {
+    background: rgb(0, 0, 0);
+    content: "";
+}
+
+section .title3 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-family: 'ubuntu'sans-serif;
+}
+.title3 {
+    font-family: 'Poppins' ,sans-serif;
+}
+hr {
+    margin-bottom: 5px;
+}
+.title3 span {
+    color:#b3313c;
+    font-size: 25px;
+}
+.title4 {
+    font-size: 30px;
+    text-align: center;
+    font-family: helvetica , sans-serif;
+    padding: 5px;
+}
+.title4 a {
+    color:#fa0eab;
+}
